@@ -15,6 +15,13 @@ import tasbeeh2 from "@/assets/tasbeeh-2.jpg";
 import tasbeeh3 from "@/assets/tasbeeh-3-fixed.jpg";
 import tasbeeh4 from "@/assets/tasbeeh-4.png";
 import tasbeeh5 from "@/assets/tasbeeh-5.jpg";
+import store1 from "@/assets/store-1.jpg";
+import store2 from "@/assets/store-2.jpg";
+import store3 from "@/assets/store-3.jpg";
+import store4 from "@/assets/store-4.jpg";
+import store5 from "@/assets/store-5.jpg";
+import store6 from "@/assets/store-6.jpg";
+import store7 from "@/assets/store-7.jpg";
 
 export interface Product {
   id: string;
@@ -138,4 +145,91 @@ export const allProducts: Product[] = [
     highlights: ["99 Handmade Beads", "Natural Wood Aroma", "Reinforced Silk Thread", "Traditional Hand-tie Imam Bead"],
     specs: { "Wood Types": "Sandalwood, Ebony, Rosewood Mix", "Length": "14 inches", "Diameter": "8mm Beads", "Origin": "Artisan Crafted" }
   },
+  { 
+    id: "32", 
+    image: store1, 
+    name: "Medina Heritage Janamaz", 
+    price: "₹1,499", 
+    numericPrice: 1499, 
+    gender: "unisex", 
+    category: "prayer mats",
+    description: "Inspired by the motifs of the Prophet's Mosque, this premium prayer mat features a soft, plush pile that provides exceptional comfort during Salah. Its non-slip base ensures stability on any surface.",
+    highlights: ["Plush Foam Filling", "Classic Islamic Art Motif", "Sleek Non-Slip Backing", "Standard Full-Size (70x120cm)"],
+    specs: { "Material": "Mercerized Cotton & Velvet", "Origin": "Turkey", "Thickness": "6mm", "Washable": "Dry Clean Recommended" }
+  },
+  { 
+    id: "33", 
+    image: store2, 
+    name: "Luxury Velvet Floral Mat", 
+    price: "₹2,299", 
+    numericPrice: 2299, 
+    gender: "unisex", 
+    category: "prayer mats",
+    isNew: true,
+    description: "A masterpiece of weaving, this mat combines luxury velvet with intricate floral embossing. Designed for those who seek elegance and extra cushioning for their joints.",
+    highlights: ["High-Density Velvet", "Embossed Floral Borders", "Ornate Tassel Finishes", "Joint Comfort Cushioning"],
+    specs: { "Material": "Luxury Velvet", "Weave": "Jacquard", "Dimensions": "80x130cm", "Weight": "1.2kg" }
+  },
+  { 
+    id: "34", 
+    image: store3, 
+    name: "Artisan Turkish Sejjada", 
+    price: "₹1,899", 
+    numericPrice: 1899, 
+    gender: "unisex", 
+    category: "prayer mats",
+    description: "Hand-finished prayer mat from the heart of Bursa. Features traditional Ottoman geometry and a rich color palette that symbolizes spiritual heritage.",
+    highlights: ["Traditional Ottoman Pattern", "Durable Silk-Cotton Blend", "Fringe Detail", "Authentic Turkish Craftsmanship"]
+  },
+  { 
+    id: "35", 
+    image: store4, 
+    name: "The Sealed Nectar", 
+    price: "₹850", 
+    numericPrice: 850, 
+    gender: "unisex", 
+    category: "books",
+    subCategory: "english",
+    description: "A complete authoritative book on the life of Prophet Muhammad (S) by Sheikh Safi-ur-Rahman al-Mubarkpuri. Translated into English, it offers a detailed and chronological account of Islamic history.",
+    highlights: ["Award Winning Biography", "Hardcover Edition", "Translated to English", "Authentic References"],
+    specs: { "Author": "Safi-ur-Rahman al-Mubarkpuri", "Pages": "580", "Binding": "Hardcover", "Language": "English" }
+  },
+  { 
+    id: "36", 
+    image: store5, 
+    name: "Hisnul Muslim (Roman)", 
+    price: "₹199", 
+    numericPrice: 199, 
+    gender: "unisex", 
+    category: "books",
+    subCategory: "roman",
+    description: "The complete pocket-sized guide to daily duas and supplications. This Roman transliterated edition is perfect for those who want to memorize and recite authentic duas from the Sunnah.",
+    highlights: ["Pocket Sized", "Roman Transliteration", "English Translation Included", "Daily Protection Duas"]
+  },
+  { 
+    id: "37", 
+    image: store6, 
+    name: "Riyad us-Saliheen", 
+    price: "₹1,200", 
+    numericPrice: 1200, 
+    gender: "unisex", 
+    category: "books",
+    subCategory: "english",
+    isNew: true,
+    description: "Compiled by Imam An-Nawawi, this 2-volume set contains over 1,800 Hadiths covering ethics, behavior, and the path of righteousness.",
+    highlights: ["2 Volume Deluxe Set", "Original Arabic + English", "Thematic Categorization", "Essential Hadith Collection"],
+    specs: { "Volumes": "2", "Binding": "Leather Bound Style", "Weight": "2.1kg" }
+  },
+  { 
+    id: "38", 
+    image: store7, 
+    name: "Prophet's Prayer Guide", 
+    price: "₹450", 
+    numericPrice: 450, 
+    gender: "unisex", 
+    category: "books",
+    subCategory: "english",
+    description: "A step-by-step guide to the Salah according to the authentic Sunnah of Rasulullah (S). Includes illustrations and evidences for every posture.",
+    highlights: ["Step-by-Step Guide", "Authentic Hadith Evidence", "Clear Illustrations", "Ideal for Beginners"]
+  }
 ];
