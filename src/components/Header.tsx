@@ -39,9 +39,9 @@ const Header = () => {
         {/* Logo */}
         <a href="/" className="flex-shrink-0">
           <img 
-            src="/logo.jpg" 
+            src="/logo.png" 
             alt="Kaleemiya Perfumes Logo" 
-            className="h-10 md:h-14 w-auto object-contain brightness-110"
+            className="h-10 md:h-14 w-auto object-contain"
           />
         </a>
 

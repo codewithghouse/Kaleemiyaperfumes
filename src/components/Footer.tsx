@@ -77,7 +77,7 @@ const Footer = () => {
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-20 py-8 border-t border-border/20 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex flex-col items-center md:items-start gap-4">
           <img 
-            src="/logo.jpg" 
+            src="/logo.png" 
             alt="Kaleemiya Logo" 
             className="h-10 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
           />
