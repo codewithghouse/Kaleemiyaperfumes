@@ -14,35 +14,50 @@ import ProductDetail from "./pages/ProductDetail.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import AIChatbot from "./components/AIChatbot.tsx";
 
+import { useState } from "react";
+import SplashScreen from "./components/SplashScreen.tsx";
+import { AnimatePresence } from "framer-motion";
+
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter 
-        future={{ 
-          v7_startTransition: true,
-          v7_relativeSplatPath: true,
-        }}
-      >
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/attar" element={<Attar />} />
-          <Route path="/gift-sets" element={<GiftSets />} />
-          <Route path="/prayer-mats" element={<PrayerMats />} />
-          <Route path="/books" element={<IslamicBooks />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <AIChatbot />
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <AnimatePresence mode="wait">
+          {loading && <SplashScreen onComplete={() => setLoading(false)} />}
+        </AnimatePresence>
+        
+        {!loading && (
+          <>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter 
+              future={{ 
+                v7_startTransition: true,
+                v7_relativeSplatPath: true,
+              }}
+            >
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/shop" element={<Shop />} />
+                <Route path="/attar" element={<Attar />} />
+                <Route path="/gift-sets" element={<GiftSets />} />
+                <Route path="/prayer-mats" element={<PrayerMats />} />
+                <Route path="/books" element={<IslamicBooks />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/product/:id" element={<ProductDetail />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+              <AIChatbot />
+            </BrowserRouter>
+          </>
+        )}
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
