@@ -30,7 +30,7 @@ const footerLinks = {
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border/30 bg-maroon-deep">
+    <footer className="border-t border-primary/20 bg-[#422d08] shadow-[0_-20px_50px_rgba(255,215,0,0.1)] relative">
       {/* Newsletter */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
