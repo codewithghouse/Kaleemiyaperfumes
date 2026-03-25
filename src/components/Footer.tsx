@@ -30,7 +30,7 @@ const footerLinks = {
 
 const Footer = () => {
   return (
-    <footer className="border-t border-primary/30 gold-gradient-bg text-[#310101] relative">
+    <footer className="border-t border-border/20 bg-[#F9F6F0] text-[#310101] relative">
       {/* Newsletter */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
