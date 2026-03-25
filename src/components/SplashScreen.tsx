@@ -5,60 +5,79 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
     <motion.div
       initial={{ opacity: 1 }}
       animate={{ opacity: 0 }}
-      transition={{ duration: 1, delay: 2.5, ease: "easeInOut" }}
+      transition={{ duration: 1, delay: 3, ease: "easeInOut" }}
       onAnimationComplete={onComplete}
-      className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#310101]"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-[#310101] overflow-hidden"
     >
-      <motion.div
-        initial={{ scale: 0.8, opacity: 0, filter: "blur(10px)" }}
-        animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}
-        transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-        className="relative"
-      >
-        {/* Glow effect */}
-        <div className="absolute inset-0 bg-primary/20 blur-[60px] rounded-full scale-150" />
-        
-        <img 
-          src="/logo.png" 
-          alt="Kaleemiya Logo" 
-          className="h-32 md:h-48 w-auto object-contain relative z-10"
+      <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 px-6">
+        {/* Logo Side */}
+        <motion.div
+          initial={{ x: -50, opacity: 0, scale: 0.9 }}
+          animate={{ x: 0, opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          className="relative"
+        >
+          {/* Subtle Pulse Glow */}
+          <motion.div 
+            animate={{ 
+              scale: [1, 1.2, 1],
+              opacity: [0.2, 0.4, 0.2]
+            }}
+            transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+            className="absolute inset-[-40px] bg-primary/20 blur-[40px] rounded-full"
+          />
+          
+          <img 
+            src="/logo.png" 
+            alt="Kaleemiya Logo" 
+            className="h-28 md:h-40 w-auto object-contain relative z-10"
+          />
+        </motion.div>
+
+        {/* Divider - Vertical on desktop, Horizontal on mobile */}
+        <motion.div
+          initial={{ scaleY: 0, scaleX: 0 }}
+          animate={{ scaleY: 1, scaleX: 1 }}
+          transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
+          className="w-24 md:w-px h-px md:h-32 bg-gradient-to-r md:bg-gradient-to-b from-transparent via-primary/50 to-transparent"
         />
-      </motion.div>
 
-      <motion.div
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.8, duration: 1 }}
-        className="mt-8 text-center relative z-10"
-      >
-        <h1 className="font-serif text-3xl md:text-5xl text-primary tracking-[0.5em] uppercase font-light">
-          Kaleemiya
-        </h1>
-        <div className="mt-4 flex justify-center gap-1">
-          {[0, 1, 2].map((i) => (
-            <motion.div
-              key={i}
-              animate={{ 
-                scale: [1, 1.5, 1],
-                opacity: [0.3, 1, 0.3]
-              }}
-              transition={{ 
-                repeat: Infinity, 
-                duration: 1.5, 
-                delay: i * 0.2 
-              }}
-              className="w-1.5 h-1.5 rounded-full bg-primary"
-            />
-          ))}
-        </div>
-      </motion.div>
+        {/* Text Side */}
+        <motion.div
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.3, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center md:text-left"
+        >
+          <motion.h1 
+            className="font-serif text-4xl md:text-6xl text-primary tracking-[0.3em] uppercase font-light leading-none"
+          >
+            Kaleemiya
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.6 }}
+            transition={{ delay: 1, duration: 1 }}
+            className="mt-4 font-sans text-[10px] md:text-xs tracking-[0.5em] uppercase text-primary/80"
+          >
+            Since 2019 • Pure Arabic Feel
+          </motion.p>
+        </motion.div>
+      </div>
 
-      {/* Finishing line */}
+      {/* Luxury Background Shimmer */}
       <motion.div
-        initial={{ width: 0 }}
-        animate={{ width: "120px" }}
-        transition={{ delay: 1, duration: 1.2, ease: "easeInOut" }}
-        className="mt-10 h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent"
+        animate={{ 
+          x: [-500, 1500],
+          opacity: [0, 0.1, 0]
+        }}
+        transition={{ 
+          repeat: Infinity, 
+          duration: 4, 
+          delay: 1,
+          ease: "linear" 
+        }}
+        className="absolute top-0 bottom-0 w-[300px] bg-gradient-to-r from-transparent via-primary/20 to-transparent skew-x-[30deg]"
       />
     </motion.div>
   );
