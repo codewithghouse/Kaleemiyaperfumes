@@ -11,12 +11,12 @@ import product5 from "@/assets/product-5.jpg";
 import product6 from "@/assets/product-6.jpg";
 
 const bestsellers = [
-  { image: product1, name: "Royal Amber", price: "₹3,499" },
-  { image: product2, name: "Sultan Attar", price: "₹2,799" },
-  { image: product3, name: "Oud Al Malikah", price: "₹5,999" },
-  { image: product4, name: "Bakhoor Al Dar", price: "₹1,899" },
-  { image: product5, name: "Rose Taifi", price: "₹4,299" },
-  { image: product6, name: "Musk Al Tahara", price: "₹2,199" },
+  { id: "1", image: product1, name: "Royal Amber", price: "₹3,499" },
+  { id: "2", image: product2, name: "Sultan Attar", price: "₹2,799" },
+  { id: "3", image: product3, name: "Oud Al Malikah", price: "₹5,999" },
+  { id: "4", image: product4, name: "Bakhoor Al Dar", price: "₹1,899" },
+  { id: "5", image: product5, name: "Rose Taifi", price: "₹4,299" },
+  { id: "6", image: product6, name: "Musk Al Tahara", price: "₹2,199" },
 ];
 
 const BestsellersSection = () => {

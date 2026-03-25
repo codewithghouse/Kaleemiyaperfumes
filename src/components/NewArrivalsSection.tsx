@@ -9,10 +9,14 @@ import product6 from "@/assets/product-6.jpg";
 import product1 from "@/assets/product-1.jpg";
 
 const newArrivals = [
-  { image: product5, name: "Velvet Rose Oud", price: "₹6,499", isNew: true },
-  { image: product6, name: "White Musk Noir", price: "₹3,199", isNew: true },
-  { image: product3, name: "Oud Ishq", price: "₹7,999", isNew: true },
-  { image: product1, name: "Amber Noir", price: "₹4,599", isNew: true },
+  { id: "5", image: product5, name: "Velvet Rose Oud", price: "₹6,499", isNew: true },
+  { id: "6", image: product6, name: "White Musk Noir", price: "₹3,199", isNew: true },
+  { id: "3", image: product3, name: "Oud Ishq", price: "₹7,999", isNew: true },
+  { id: "1", image: product1, name: "Amber Noir", price: "₹4,599", isNew: true },
+  { id: "9", image: product3, name: "Musk Al Madinah", price: "₹2,199", isNew: true },
+  { id: "13", image: product1, name: "Noorique Essence", price: "₹4,999", isNew: true },
+  { id: "20", image: product5, name: "Royal Oudh", price: "₹9,999", isNew: true },
+  { id: "22", image: product6, name: "Car Diffuser Luxe", price: "₹3,999", isNew: true },
 ];
 
 const NewArrivalsSection = () => {
@@ -24,7 +28,7 @@ const NewArrivalsSection = () => {
   };
 
   return (
-    <section className="section-padding overflow-hidden" style={{ background: "linear-gradient(180deg, hsl(0, 78%, 8%) 0%, hsl(0, 0%, 3.1%) 100%)" }}>
+    <section className="section-padding overflow-hidden bg-background">
       <SectionHeading title="New Arrivals" subtitle="The latest additions to our collection" />
 
       <div className="relative">
