@@ -78,7 +78,7 @@ const HeroSection = () => {
         transition={{ delay: 2, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-foreground/30 text-[10px] tracking-[0.3em] uppercase font-sans">Scroll</span>
+        <span className="text-foreground/50 text-sm tracking-[0.5em] uppercase font-sans font-medium">Scroll</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
