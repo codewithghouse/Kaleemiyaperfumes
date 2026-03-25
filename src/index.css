@@ -6,10 +6,10 @@
 
 @layer base {
   :root {
-    --background: 0 96% 19%; /* #5F0202 */
+    --background: 0 96% 10%; /* #310101 - Even darker maroon */
     --foreground: 0 0% 100%; /* #FFFFFF */
 
-    --card: 0 96% 12%; /* Darker than background */
+    --card: 0 96% 6%; /* Almost black with maroon tint */
     --card-foreground: 0 0% 100%;
 
     --popover: 0 76% 12%; 

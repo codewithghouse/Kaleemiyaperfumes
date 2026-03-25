@@ -147,7 +147,7 @@ export const allProducts: Product[] = [
   },
   { 
     id: "32", 
-    image: store1, 
+    image: "/prayer-mat-1.png", 
     name: "Medina Heritage Janamaz", 
     price: "₹1,499", 
     numericPrice: 1499, 
@@ -159,7 +159,7 @@ export const allProducts: Product[] = [
   },
   { 
     id: "33", 
-    image: store2, 
+    image: "/prayer-mat-2.png", 
     name: "Luxury Velvet Floral Mat", 
     price: "₹2,299", 
     numericPrice: 2299, 
@@ -172,7 +172,7 @@ export const allProducts: Product[] = [
   },
   { 
     id: "34", 
-    image: store3, 
+    image: "/prayer-mat-3.png", 
     name: "Artisan Turkish Sejjada", 
     price: "₹1,899", 
     numericPrice: 1899, 
@@ -183,7 +183,7 @@ export const allProducts: Product[] = [
   },
   { 
     id: "35", 
-    image: store4, 
+    image: "/islamic-books.png", 
     name: "The Sealed Nectar", 
     price: "₹850", 
     numericPrice: 850, 
@@ -196,7 +196,7 @@ export const allProducts: Product[] = [
   },
   { 
     id: "36", 
-    image: store5, 
+    image: "/islamic-books.png", 
     name: "Hisnul Muslim (Roman)", 
     price: "₹199", 
     numericPrice: 199, 
@@ -208,7 +208,7 @@ export const allProducts: Product[] = [
   },
   { 
     id: "37", 
-    image: store6, 
+    image: "/islamic-books.png", 
     name: "Riyad us-Saliheen", 
     price: "₹1,200", 
     numericPrice: 1200, 
@@ -222,7 +222,7 @@ export const allProducts: Product[] = [
   },
   { 
     id: "38", 
-    image: store7, 
+    image: "/islamic-books.png", 
     name: "Prophet's Prayer Guide", 
     price: "₹450", 
     numericPrice: 450, 
