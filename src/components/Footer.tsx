@@ -37,7 +37,7 @@ const Footer = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-20 py-20 text-center border-b border-[#310101]/10"
+        className="max-w-full mx-auto px-4 md:px-10 lg:px-16 py-20 text-center border-b border-[#310101]/10"
       >
         <h3 className="font-serif text-2xl md:text-3xl mb-3 text-[#310101]">Join the Kaleemiya World</h3>
         <p className="text-[#310101]/70 font-sans text-sm mb-8 max-w-md mx-auto">
@@ -56,7 +56,7 @@ const Footer = () => {
       </motion.div>
 
       {/* Links */}
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-20 py-16 grid grid-cols-2 md:grid-cols-4 gap-10">
+      <div className="max-w-full mx-auto px-4 md:px-10 lg:px-16 py-16 grid grid-cols-2 md:grid-cols-4 gap-10">
         {Object.entries(footerLinks).map(([title, links]) => (
           <div key={title}>
             <h4 className="font-serif text-lg text-[#310101] mb-5">{title}</h4>
@@ -74,7 +74,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom */}
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-20 py-8 border-t border-[#310101]/10 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="max-w-full mx-auto px-4 md:px-10 lg:px-16 py-8 border-t border-[#310101]/10 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex flex-col items-center md:items-start gap-4">
           <img 
             src="/logo.png" 

@@ -21,7 +21,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-[1440px] w-full mx-auto px-6 md:px-12 lg:px-20">
+      <div className="relative z-10 max-w-full w-full mx-auto px-4 md:px-10 lg:px-16">
         <div className="max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}

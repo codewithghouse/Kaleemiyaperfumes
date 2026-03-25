@@ -35,7 +35,7 @@ const Header = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1440px] mx-auto flex items-center justify-between px-6 md:px-12 lg:px-20 h-20">
+      <div className="max-w-full mx-auto flex items-center justify-between px-4 md:px-10 lg:px-16 h-20">
         {/* Logo */}
         <a href="/" className="flex-shrink-0">
           <img 
