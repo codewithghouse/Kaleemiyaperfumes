@@ -6,10 +6,10 @@
 
 @layer base {
   :root {
-    --background: 0 75% 24%; /* #6B0F0F */
+    --background: 0 96% 19%; /* #5F0202 */
     --foreground: 0 0% 100%; /* #FFFFFF */
 
-    --card: 0 76% 16%; /* #4A0A0A */
+    --card: 0 96% 12%; /* Darker than background */
     --card-foreground: 0 0% 100%;
 
     --popover: 0 76% 12%; 
@@ -37,8 +37,8 @@
     --radius: 0.1rem; /* Sharp, luxury look */
 
     /* Brand tokens */
-    --maroon: 0 75% 24%;
-    --maroon-deep: 0 76% 16%;
+    --maroon: 0 96% 19%;
+    --maroon-deep: 0 96% 12%;
     --gold: 43 80% 46%;
     --gold-light: 45 87% 62%;
     --gold-gradient: linear-gradient(135deg, hsl(43, 80%, 46%), hsl(45, 87%, 62%));
