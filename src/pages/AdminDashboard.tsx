@@ -2102,6 +2102,27 @@ const AdminDashboard = () => {
                       </div>
                    </div>
                 </div>
+
+                <div className="space-y-4">
+                  <label className="text-[12px] font-black uppercase text-[#B0843D] tracking-[0.2em]">Fragrance Highlights / Key Features</label>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {newProduct.highlights.map((highlight, idx) => (
+                      <input 
+                        key={idx}
+                        placeholder={`Highlight ${idx + 1} (e.g. Long-lasting)`}
+                        value={highlight}
+                        onChange={(e) => {
+                          const newHighlights = [...newProduct.highlights];
+                          newHighlights[idx] = e.target.value;
+                          setNewProduct({...newProduct, highlights: newHighlights});
+                        }}
+                        className="w-full p-5 bg-gray-50 rounded-2xl font-bold border-none outline-none focus:ring-4 focus:ring-[#B0843D]/10 text-[16px] italic font-serif text-[#1A1A1A] placeholder:text-black/20"
+                      />
+                    ))}
+                  </div>
+                  <p className="text-[10px] font-black uppercase opacity-20 tracking-widest italic">Visible as bullet points on the product page.</p>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                    <div className="space-y-3">
                       <label className="text-[12px] font-black uppercase opacity-30">Main Product Image</label>
@@ -2691,6 +2712,25 @@ const AdminDashboard = () => {
                            <Star className={`w-4 h-4 ${editingProduct.isBestseller ? 'fill-current' : ''}`} />
                            {editingProduct.isBestseller ? "In Bestsellers" : "Add to Bestsellers"}
                         </button>
+                     </div>
+
+                     <div className="md:col-span-2 space-y-4 pt-4 border-t border-gray-50">
+                        <label className="text-[12px] font-black uppercase text-[#B0843D] tracking-[0.2em]">Product Highlights</label>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                           {(editingProduct.highlights || ["", "", ""]).map((highlight: string, idx: number) => (
+                              <input 
+                                 key={idx}
+                                 placeholder={`Highlight ${idx + 1}`}
+                                 value={highlight}
+                                 onChange={(e) => {
+                                    const newHighlights = [...(editingProduct.highlights || ["", "", ""])];
+                                    newHighlights[idx] = e.target.value;
+                                    setEditingProduct({...editingProduct, highlights: newHighlights});
+                                 }}
+                                 className="w-full p-5 bg-gray-50 rounded-2xl font-bold border-none outline-none focus:ring-4 focus:ring-[#B0843D]/10 text-[16px] italic font-serif text-[#1A1A1A] placeholder:text-black/20"
+                              />
+                           ))}
+                        </div>
                      </div>
 
                      <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">

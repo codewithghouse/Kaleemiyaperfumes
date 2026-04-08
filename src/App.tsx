@@ -84,22 +84,24 @@ const SupportWidgets = () => {
 };
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => {
+    const splashCount = parseInt(sessionStorage.getItem("kaleemiya_splash_count") || "0");
+    return splashCount < 3;
+  });
 
+  // Removed strict refresh redirect to allow staying on current page (e.g. product details) after reload
   useEffect(() => {
-    try {
-      const entries = performance.getEntriesByType("navigation") as PerformanceNavigationTiming[];
-      if (entries.length > 0 && entries[0].type === "reload") {
-        const path = window.location.pathname;
-        // Strictly enforcing refresh redirect to Home except for administrative domains
-        if (path !== "/" && !path.startsWith("/admin")) {
-          window.location.replace("/");
-        }
-      }
-    } catch (error) {
-      // Fallback ignore if navigation API is unsupported
+    // Ensuring scroll stability on remount
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
     }
   }, []);
+
+  const handleSplashComplete = () => {
+    const currentCount = parseInt(sessionStorage.getItem("kaleemiya_splash_count") || "0");
+    sessionStorage.setItem("kaleemiya_splash_count", (currentCount + 1).toString());
+    setLoading(false);
+  };
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -107,7 +109,7 @@ const App = () => {
         <AuthProvider>
           <CartProvider>
             <AnimatePresence mode="wait">
-              {loading && <SplashScreen onComplete={() => setLoading(false)} />}
+              {loading && <SplashScreen onComplete={handleSplashComplete} />}
             </AnimatePresence>
             
             {!loading && (
